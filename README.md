@@ -1,4 +1,6 @@
 # NV-Player
+این Readme به دو زبان انگلیسی و در ادامه فارسی نوشته و تنظیم شده است!
+This README is written and formatted in both English and Persian, with the Persian section following the English one!
 
 **NV-Player** is a video player built to support modern web standards, allowing seamless integration of video playback with an advanced user interface. This player supports various media formats and provides customization options for subtitles, themes, and more. It’s designed for easy integration into web projects and can be customized to fit different design preferences.
 
