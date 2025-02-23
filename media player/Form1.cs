@@ -34,6 +34,10 @@ namespace media_player
         private void Form1_Load(object sender, EventArgs e)
         {
             mp1.uiMode = "none";
+            trackBarSeek.MouseDown += trackBarSeek_MouseDown;
+            trackBarSeek.MouseUp += trackBarSeek_MouseUp;
+            trackBarVolume.Scroll += trackBarVolume_Scroll;
+            //this.Resize += Form1_Resize;
         }
 
         private void btnplay_Click(object sender, EventArgs e)
@@ -76,12 +80,70 @@ namespace media_player
             {
                 mp1.settings.mute = false;
                 btnmute.Text = "Mute";
+                trackBarVolume.Value = mp1.settings.volume;
             }
             else
             {
                 mp1.settings.mute = true;
                 btnmute.Text = "Unmute";
+                trackBarVolume.Value = 0;
             }
-        } 
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            if(mp1.currentMedia != null && mp1.currentMedia.duration > 0)
+            {
+                double progress = (mp1.Ctlcontrols.currentPosition / mp1.currentMedia.duration) * 100;
+                trackBarSeek.Value = (int)progress;
+            }
+        }
+
+        private void trackBarSeek_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBarSeek_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (mp1.currentMedia != null && mp1.currentMedia.duration > 0)
+            {
+                double newPosition = (e.X / (double)trackBarSeek.Width) * mp1.currentMedia.duration;
+                mp1.Ctlcontrols.currentPosition = newPosition;
+            }
+            timer1.Stop();
+        }
+
+        private void trackBarSeek_MouseUp(object sender, MouseEventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void trackBarVolume_Scroll(object sender, EventArgs e)
+        {
+            mp1.settings.volume = trackBarVolume.Value;
+        }
+
+        private void ResizeControls()
+        {
+            //int controlPanelHeight = 50; // مقدار ارتفاع کنترل‌های پایین (مثل دکمه‌ها و نوار پیشرفت)
+
+            //mp1.Width = this.ClientSize.Width;
+            //mp1.Height = this.ClientSize.Height - controlPanelHeight;
+
+            //trackBarSeek.Width = this.ClientSize.Width - 40;
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            //if (this.WindowState == FormWindowState.Maximized)
+            //{
+            //    ResizeControls(); 
+            //}
+            //else if (this.WindowState == FormWindowState.Normal)
+            //{
+            //    ResizeControls(); 
+            //}
+        }
     } 
 }
