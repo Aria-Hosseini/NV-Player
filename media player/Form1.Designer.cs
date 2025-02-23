@@ -43,6 +43,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.mp1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.trackBarVolume = new System.Windows.Forms.TrackBar();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSeek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mp1)).BeginInit();
@@ -64,7 +66,9 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.exitToolStripMenuItem,
+            this.toolStripTextBox1,
+            this.toolStripTextBox3});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
@@ -72,14 +76,14 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -171,6 +175,28 @@
             this.trackBarVolume.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBarVolume.Scroll += new System.EventHandler(this.trackBarVolume_Scroll);
             // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.BackColor = System.Drawing.Color.Gray;
+            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripTextBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.toolStripTextBox1.MaxLength = 4000000;
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 19);
+            this.toolStripTextBox1.Text = " made by Vihan";
+            // 
+            // toolStripTextBox3
+            // 
+            this.toolStripTextBox3.BackColor = System.Drawing.Color.Gray;
+            this.toolStripTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox3.Font = new System.Drawing.Font("Modam", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripTextBox3.ForeColor = System.Drawing.SystemColors.Window;
+            this.toolStripTextBox3.MaxLength = 4000000;
+            this.toolStripTextBox3.Name = "toolStripTextBox3";
+            this.toolStripTextBox3.Size = new System.Drawing.Size(100, 21);
+            this.toolStripTextBox3.Text = "  v1.1.2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -214,6 +240,8 @@
         private System.Windows.Forms.TrackBar trackBarSeek;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TrackBar trackBarVolume;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox3;
     }
 }
 
