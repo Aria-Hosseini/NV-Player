@@ -16,6 +16,12 @@ namespace media_player
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            
+            splash_screen splash = new splash_screen();
+            splash.ShowDialog();
+
+
             Application.Run(new Form1());
         }
     }

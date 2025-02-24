@@ -34,6 +34,8 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
             this.loclable = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnplay = new System.Windows.Forms.Button();
@@ -41,14 +43,12 @@
             this.btnmute = new System.Windows.Forms.Button();
             this.trackBarSeek = new System.Windows.Forms.TrackBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.mp1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.trackBarVolume = new System.Windows.Forms.TrackBar();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
+            this.mp1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSeek)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mp1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mp1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -86,6 +86,28 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.BackColor = System.Drawing.Color.Gray;
+            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripTextBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.toolStripTextBox1.MaxLength = 4000000;
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 19);
+            this.toolStripTextBox1.Text = " made by Vihan";
+            // 
+            // toolStripTextBox3
+            // 
+            this.toolStripTextBox3.BackColor = System.Drawing.Color.Gray;
+            this.toolStripTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox3.Font = new System.Drawing.Font("Modam", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripTextBox3.ForeColor = System.Drawing.SystemColors.Window;
+            this.toolStripTextBox3.MaxLength = 4000000;
+            this.toolStripTextBox3.Name = "toolStripTextBox3";
+            this.toolStripTextBox3.Size = new System.Drawing.Size(100, 21);
+            this.toolStripTextBox3.Text = "  v1.1.2";
             // 
             // loclable
             // 
@@ -131,7 +153,7 @@
             this.btnmute.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmute.Location = new System.Drawing.Point(162, 515);
             this.btnmute.Name = "btnmute";
-            this.btnmute.Size = new System.Drawing.Size(50, 30);
+            this.btnmute.Size = new System.Drawing.Size(59, 30);
             this.btnmute.TabIndex = 5;
             this.btnmute.Text = "Mute";
             this.btnmute.UseVisualStyleBackColor = false;
@@ -154,6 +176,17 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+            // trackBarVolume
+            // 
+            this.trackBarVolume.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.trackBarVolume.Location = new System.Drawing.Point(227, 515);
+            this.trackBarVolume.Maximum = 100;
+            this.trackBarVolume.Name = "trackBarVolume";
+            this.trackBarVolume.Size = new System.Drawing.Size(138, 56);
+            this.trackBarVolume.TabIndex = 7;
+            this.trackBarVolume.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBarVolume.Scroll += new System.EventHandler(this.trackBarVolume_Scroll);
+            // 
             // mp1
             // 
             this.mp1.Enabled = true;
@@ -163,39 +196,6 @@
             this.mp1.Size = new System.Drawing.Size(459, 289);
             this.mp1.TabIndex = 0;
             this.mp1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.mp1_PlayStateChange);
-            // 
-            // trackBarVolume
-            // 
-            this.trackBarVolume.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.trackBarVolume.Location = new System.Drawing.Point(218, 515);
-            this.trackBarVolume.Maximum = 100;
-            this.trackBarVolume.Name = "trackBarVolume";
-            this.trackBarVolume.Size = new System.Drawing.Size(138, 56);
-            this.trackBarVolume.TabIndex = 7;
-            this.trackBarVolume.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.trackBarVolume.Scroll += new System.EventHandler(this.trackBarVolume_Scroll);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.BackColor = System.Drawing.Color.Gray;
-            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripTextBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.toolStripTextBox1.MaxLength = 4000000;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 19);
-            this.toolStripTextBox1.Text = " made by Vihan";
-            // 
-            // toolStripTextBox3
-            // 
-            this.toolStripTextBox3.BackColor = System.Drawing.Color.Gray;
-            this.toolStripTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.toolStripTextBox3.Font = new System.Drawing.Font("Modam", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripTextBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.toolStripTextBox3.MaxLength = 4000000;
-            this.toolStripTextBox3.Name = "toolStripTextBox3";
-            this.toolStripTextBox3.Size = new System.Drawing.Size(100, 21);
-            this.toolStripTextBox3.Text = "  v1.1.2";
             // 
             // Form1
             // 
@@ -212,14 +212,15 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSeek)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mp1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mp1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
